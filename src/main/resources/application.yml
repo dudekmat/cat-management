@@ -1,0 +1,53 @@
+server:
+  port: 8080
+  shutdown: graceful
+spring:
+  application:
+    name: cat-management
+  profiles:
+    active: local
+  flyway:
+    enabled: true
+    out-of-order: true
+    placeholder-replacement: false
+auth:
+  jwt:
+    secret-key: hgdyr332313132hgdyr3323131321332hgdyr33231313213321332hgdyr3323131321332hgdyr3323131321332hgdyr3323131321332
+    expiration-ms: 3600000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+info:
+  app:
+    encoding: UTF-8
+    java:
+      source: 17
+      target: 17
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=PostgreSQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+---
+spring:
+  config:
+    activate:
+      on-profile: local-postgres
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 10
+      schema: cat-management
+  flyway:
+    schemas: cat-management
