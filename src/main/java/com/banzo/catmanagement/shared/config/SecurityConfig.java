@@ -1,6 +1,6 @@
-package com.banzo.catmanagement.auth.config;
+package com.banzo.catmanagement.shared.config;
 
-import com.banzo.catmanagement.auth.jwt.JwtTokenFilter;
+import com.banzo.catmanagement.shared.jwt.JwtTokenFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
