@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: integrationTest
+  datasource:
+    hikari:
+      minimum-idle: 5
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    enabled: true
+    out-of-order: true
+    placeholder-replacement: false
+auth:
+  jwt:
+    secret-key: hgdyr332313132hgdyr3323131321332hgdyr33231313213321332hgdyr3323131321332hgdyr3323131321332hgdyr3323131321332
+    expiration-ms: 3600000

@@ -1,4 +1,4 @@
-package com.banzo.catmanagement.auth.jwt;
+package com.banzo.catmanagement.shared.jwt;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

@@ -35,6 +35,9 @@ spring:
     driver-class-name: org.h2.Driver
     username: sa
     password: password
+  sql:
+    init:
+      data-locations: classpath:db/scripts/data.sql
 ---
 spring:
   config:

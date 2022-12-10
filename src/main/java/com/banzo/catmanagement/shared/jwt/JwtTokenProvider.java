@@ -1,4 +1,4 @@
-package com.banzo.catmanagement.auth.jwt;
+package com.banzo.catmanagement.shared.jwt;
 
 import com.banzo.catmanagement.shared.exception.TokenException;
 import io.jsonwebtoken.Claims;

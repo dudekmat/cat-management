@@ -2,7 +2,7 @@ package com.banzo.catmanagement.auth.service;
 
 import com.banzo.catmanagement.auth.dto.JwtResponse;
 import com.banzo.catmanagement.auth.dto.UserDetails;
-import com.banzo.catmanagement.auth.jwt.JwtTokenProvider;
+import com.banzo.catmanagement.shared.jwt.JwtTokenProvider;
 import com.banzo.catmanagement.auth.mappers.UserMapper;
 import com.banzo.catmanagement.auth.model.Role;
 import com.banzo.catmanagement.auth.model.User;
